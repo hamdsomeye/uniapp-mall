@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.mall-list {
+  padding: 0 20rpx 120rpx;
+}
+.mall-list .mall-box {
+  display: inline-block;
+  vertical-align: top;
+  width: 345rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  overflow: hidden;
+}
+.mall-list .mall-box:nth-child(2n) {
+  margin-left: 20rpx;
+}
+.mall-list .mall-box .mall-cover {
+  position: relative;
+  width: 100%;
+  height: 200rpx;
+  display: inline-block;
+  vertical-align: top;
+  background-size: cover;
+  background-position: center;
+}
+.mall-list .mall-box .mall-cover > text {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  padding: 1px 10rpx;
+  background-color: rgba(136, 145, 171, 0.5);
+  font-size: 20rpx;
+  color: #fff;
+  border-radius: 5rpx;
+}
+.mall-list .mall-title {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  margin: 20rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+.mall-list .mall-score {
+  font-size: 20rpx;
+  padding: 0 20rpx;
+}
+.mall-list .mall-score:first-child {
+  color: #fe587a;
+}
+.mall-list .mall-score:last-child {
+  color: #8891ab;
+  margin-left: 12rpx;
+}
+.mall-list .mall-reduct {
+  padding: 10rpx 20rpx;
+}
+.mall-list .mall-reduct > ._div:first-child {
+  margin-left: 0;
+}
+.mall-list .mall-reduct > ._div {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 18rpx;
+  color: #fe587a;
+  padding: 0 10rpx;
+  border-radius: 5rpx;
+  border: 1px solid #fe587a;
+  background-color: rgba(254, 88, 122, 0.1);
+  margin-left: 5rpx;
+}
+.mall-list .mall-price {
+  font-size: 20rpx;
+  color: #8891ab;
+  padding: 0 20rpx 20rpx;
+}
+.mall-list .mall-more {
+  font-size: 24rpx;
+  color: #8891ab;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+}
+

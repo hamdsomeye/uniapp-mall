@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "search": "/pages/advert/components/search",
+    "sort": "/pages/advert/components/sort",
+    "list": "/pages/advert/components/list"
+  }
+}

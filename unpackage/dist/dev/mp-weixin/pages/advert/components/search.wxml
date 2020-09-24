@@ -1,0 +1,1 @@
+<view class="serach-box _div"><u-search vue-id="2c0949b2-1" placeholder="搜索商品" bind:__l="__l"></u-search><u-swiper class="swiper-banner" vue-id="2c0949b2-2" effect3d="{{true}}" list="{{list}}" mode="rect" bind:__l="__l"></u-swiper></view>

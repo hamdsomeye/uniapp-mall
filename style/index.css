@@ -1,0 +1,17 @@
+@import url("./iconfont.css");
+.color-1a82fc{
+	color: #1a82fc;
+}
+.color-fcee15{
+	color: #fcee15;
+}
+.color-fe587a{
+	color: #fe587a;
+}
+.color-528ce0{
+	color: #528CE0;
+}
+
+.item-btn-touch:active{
+	background-color: #e1e3ea;
+}
