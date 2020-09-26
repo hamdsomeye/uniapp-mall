@@ -3,7 +3,7 @@ import App from './App'
 import uView from 'uview-ui'
 import store from './store'
 
-import './style/index.css'
+import './style/index.scss'
 
 Vue.use(uView)
 Vue.prototype.$store = store

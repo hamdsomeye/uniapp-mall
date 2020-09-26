@@ -1,0 +1,25 @@
+@import url("./iconfont.css");
+
+$color1a82fc: #1a82fc;
+$colorF6C6CE: #F6C6CE;
+$colorfe587a: #fe587a;
+$color528CE0: #528CE0;
+$colore1e3ea: #e1e3ea;
+$colorefff: #fff;
+
+.color-1a82fc{
+	color: $color1a82fc;
+}
+.color-f6c6ce{
+	color: $colorF6C6CE;
+}
+.color-fe587a{
+	color: $colorfe587a;
+}
+.color-528ce0{
+	color: $color528CE0;
+}
+
+.item-btn-touch:active{
+	background-color: $colore1e3ea;
+}

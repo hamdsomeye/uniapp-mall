@@ -1,6 +1,6 @@
 <template>
 	<view class="mall-list">
-		<view  class="mall-box" v-for="(mall,index) in mall_list" :key="index">
+		<view  class="mall-box" v-for="(mall,index) in mall_list" :key="index" @click="mall_detail">
 			<view class="mall-cover" :style="{'background-image': 'url('+mall.image+')'}">
 				<text>外卖 · 30分钟送达</text>
 			</view>
@@ -41,6 +41,13 @@
 					title: "限时赠送30天无忧体验服务，尊享白条分期24期免息，骁龙865处理器【小米10至尊版限时预约中!点击直达】",
 					price: "3999.00"
 				}]
+			}
+		},
+		methods: {
+			mall_detail: function() {
+				uni.navigateTo({
+				    url: '/pages/detail/index'
+				});
 			}
 		}
 	}
