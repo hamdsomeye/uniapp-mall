@@ -10,6 +10,8 @@
   "libVersion": "",
   "appid": "touristappid",
   "projectname": "defult",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
   "condition": {
     "search": {
       "current": -1,

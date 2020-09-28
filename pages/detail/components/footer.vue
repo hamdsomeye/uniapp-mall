@@ -9,6 +9,15 @@
 </template>
 
 <script>
+	export default {
+		props: {
+			selectInfo: {
+				type: Object,
+				default: {}
+			}
+		},
+		
+	}
 </script>
 
 <style lang="scss">

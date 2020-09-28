@@ -18,7 +18,8 @@
                             <text class="goods-info-original">¥ {{data.past_price}}</text>
                         </view>
                     </view>
-                     <view class="select-type" @click="goodsTypeInfoModel(data.id)">选规格</view>
+                     <view class="select-type" @click="goodsTypeInfoModel(data.id)" v-if="data.goods_type_info.length > 1">选规格</view>
+					 <view class="select-type-one" @click="selectGoodsId(data.id)" v-else>+</view>
                 </view>
             </view>
         </scroll-view>
@@ -34,6 +35,7 @@ export default {
 			into_view: '',
 			select_label: 1,
 			topList: [],
+			selectInfo: [],
 			leftClick: false,
 			label: {
 				rows: [
@@ -50,6 +52,7 @@ export default {
 					]
 			},
 			list: {
+				merchant_id: 1,
 				rows: [{
 					id: 1,
 					headimg: 'https://img.meituan.net/msmerchant/af6e5f77dca691d39e1583847349f1d0511132.jpg',
@@ -82,12 +85,6 @@ export default {
 					goods_type_info: [{
 						'id': 1,
 						'name': '虫汤'
-					},{
-						'id': 2,
-						'name': '草汤'
-					},{
-						'id': 3,
-						'name': '花汤'
 					}]
 				},{
 					id: 3,
@@ -199,7 +196,7 @@ export default {
     computed: {
         goodsHeight: function(){
             return this.screenHeight - 246
-        }
+        },
     },
 	methods: {
 		switchLabel: function(label_id){
@@ -247,6 +244,19 @@ export default {
 			this.$emit('showModel',{
 				show: true,
 				goods_type: goods_type,
+			})
+		},
+		selectGoodsId: function(goods_id){
+			let selectInfo = []
+			this.list.rows.forEach(v => {
+				if(v.id == goods_id){
+					selectInfo.push(v)
+				}
+			})
+			this.selectInfo  =  selectInfo
+			this.$emit('selectInfo',{
+				merchant_id: this.list.merchant_id,
+				selectInfo
 			})
 		}
 	},
@@ -341,6 +351,18 @@ export default {
 			    text-align: center;
 			    border-radius: 30rpx;
 			    background-color: #ffd369;
+			}
+			.select-type-one{
+				position: absolute;
+				right: 30rpx;
+				bottom: 0;
+				font-size: 28rpx;
+				width: 60rpx;
+				height: 60rpx;
+				line-height: 60rpx;
+				text-align: center;
+				border-radius: 50%;
+				background-color: #ffd369;
 			}
 		}
     }

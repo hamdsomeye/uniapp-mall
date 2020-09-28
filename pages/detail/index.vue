@@ -2,9 +2,9 @@
 	<view class="content">
         <uni-header class="header"></uni-header>
         <uni-switch></uni-switch>
-        <uni-goods  @showModel="showModel"></uni-goods>
-		<uni-footer></uni-footer>
-		<uni-goods-type-model :show="show" :goodsType="goods_type"></uni-goods-type-model>
+        <uni-goods  @showModel="showModel" @selectInfo="selectInfo"></uni-goods>
+		<uni-footer :selectInfo="selectInfo"></uni-footer>
+		<uni-goods-type-model :show="show" :goodsType="goods_type" @hiddenModel="hiddenModel"></uni-goods-type-model>
 	</view>
 </template>
 
@@ -25,6 +25,7 @@
 		data() {
 			return {
 				show: false,
+				selectInfo: [],
 				goods_type: []
 			}
 		},
@@ -35,6 +36,12 @@
 			showModel: function(v) {
 				this.show = v.show
 				this.goods_type = v.goods_type
+			},
+			hiddenModel: function(hidden) {
+				this.show = hidden
+			},
+			selectInfo: function(e){
+				this.selectInfo = e
 			}
 		}
 	}

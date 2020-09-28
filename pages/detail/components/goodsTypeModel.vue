@@ -1,5 +1,5 @@
 <template>
-	<view class="goods-type-model" v-if="show">
+	<view class="goods-type-model" v-if="showModel">
 		<view class="model-bg" @click="hiddenModel()"></view>
 		<view class="model-content">
 			<view class="model-title">规格</view>
@@ -28,7 +28,12 @@
 		data() {
 			return {
 				select_type: 1,
-				showModel: this.show
+				showModel: false
+			}
+		},
+		watch: {
+			show: function(e){
+				this.showModel = e
 			}
 		},
 		methods: {
@@ -37,6 +42,7 @@
 			},
 			hiddenModel: function() {
 				this.showModel = false
+				this.$emit('hiddenModel',false)
 			}
 		}
 	}
