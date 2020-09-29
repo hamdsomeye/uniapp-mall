@@ -42,13 +42,7 @@ export default {
 						{id:1,name: '热销'},
 						{id:2,name: '折扣'},
 						{id:3,name: '特价'},
-						{id:4,name: '限时抢购'},
-						{id:5,name: '必选'},
-						{id:6,name: '小吃'},
-						{id:7,name: '加饭'},
-						{id:8,name: '饮料'},
-						{id:9,name: '新品上线'},
-						{id:10,name: '套餐'}
+						{id:4,name: '限时抢购'}
 					]
 			},
 			list: {

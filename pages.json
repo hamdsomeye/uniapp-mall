@@ -14,11 +14,15 @@
 			"style": {
 				"navigationBarTitleText": "我的"
 			}
-		}
-        ,{
+		},{
             "path" : "pages/detail/index",
             "style" : {
 				"navigationBarTitleText": "详情"
+			}
+        },{
+            "path" : "pages/login/index",
+            "style" : {
+				"navigationBarTitleText": "登录"
 			}
         }
     ],
